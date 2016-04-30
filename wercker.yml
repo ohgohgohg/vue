@@ -26,10 +26,7 @@ build:
     - npm-install
     # A step that executes `npm test` command
     - npm-test
-    # latest stable
-    - npm install vue
-    # latest stable + CSP-compliant
-    - npm install vue@csp
+
     # A custom script step, name value is used in the UI
     # and the code value contains the command that get executed
     - script:
@@ -37,4 +34,5 @@ build:
         code: |
           echo "node version $(node -v) running"
           echo "npm version $(npm -v) running"
-
+          npm install vue
+          npm install vue@csp
